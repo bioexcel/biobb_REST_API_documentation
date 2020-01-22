@@ -1,0 +1,8 @@
+name: biobb_REST_API_documentation
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python==3.6
+  - nglview==1.1.7
+  - conda

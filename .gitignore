@@ -1,0 +1,16 @@
+guidelines.md
+*.pdb
+*.top
+*.dcd
+*.edr
+*.xvg
+!biobb_REST_API_documentation/notebooks/files/*
+log*.*
+.ipynb_checkpoints/
+biobb_REST_API_documentation/notebooks/*.png
+biobb_REST_API_documentation/notebooks/*.gif
+biobb_REST_API_documentation/notebooks/*.web.ipynb
+biobb_REST_API_documentation/notebooks/*.docs.ipynb
+*.old.ipynb
+*.bk.ipynb
+\#*\#
