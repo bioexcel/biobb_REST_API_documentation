@@ -1,12 +1,8 @@
-[![Binder](https://mybinder.org/badge_logo.svg)]()
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bioexcel/biobb_REST_API_documentation/master?filepath=biobb_REST_API_documentation%2Fnotebooks%2Fbiobb_REST_API_documentation.ipynb)
 
-# Protein MD Setup tutorial using BioExcel Building Blocks (biobb) through REST API
+# BioBB REST API documentation tutorial
 
-**Based on the official [GROMACS tutorial](http://www.mdtutorials.com/gmx/lysozyme/index.html).**
-
-***
-
-This tutorial aims to illustrate the process of **setting up a simulation** system containing a **protein**, step by step, using the **BioExcel Building Blocks library (biobb)**. The particular example used is the **Lysozyme** protein (PDB code 1AKI).
+This tutorial explains how to execute the different endpoints of the [BioBB REST API](https://mmb.irbbarcelona.org/biobb-api). Besides, it provides the users with several functions created to make easier the connection to the REST API through a Jupyter Notebook document.
 
 ***
 
@@ -18,7 +14,6 @@ This tutorial aims to illustrate the process of **setting up a simulation** syst
 * [nglview](http://nglviewer.org/#nglview): Jupyter/IPython widget to interactively view molecular structures and trajectories in notebooks.
 * [ipywidgets](https://github.com/jupyter-widgets/ipywidgets): Interactive HTML widgets for Jupyter notebooks and the IPython kernel.
 * [plotly](https://plot.ly/python/offline/): Python interactive graphing library integrated in Jupyter notebooks.
-* [simpletraj](https://github.com/arose/simpletraj): Lightweight coordinate-only trajectory reader based on code from GROMACS, MDAnalysis and VMD.
 
 ### Conda Installation and Launch
 
@@ -38,7 +33,7 @@ jupyter-notebook biobb_REST_API_documentation/notebooks/biobb_REST_API_documenta
 
 Click here to [view tutorial in Read the Docs]()
 
-Click here to [execute tutorial in Binder]()
+Click here to [execute tutorial in Binder](https://mybinder.org/v2/gh/bioexcel/biobb_REST_API_documentation/master?filepath=biobb_REST_API_documentation%2Fnotebooks%2Fbiobb_REST_API_documentation.ipynb)
 
 ***
 
