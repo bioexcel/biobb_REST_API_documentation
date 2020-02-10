@@ -4,5 +4,6 @@ channels:
   - bioconda
 dependencies:
   - python==3.6
+  - requests
   - nglview==1.1.7
   - conda
