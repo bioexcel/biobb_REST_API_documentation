@@ -7,7 +7,7 @@
 
 .. image:: https://bioexcel.eu/wp-content/uploads/2019/04/Bioexcell_logo_1080px_transp.png
 
-Ligand Parameterization REST API tutorial
+BioBB REST API documentation tutorial
 ------------------------------------------
 
 Contents
@@ -19,6 +19,6 @@ Contents
    Introduction & installation <readme>
    Tutorial <tutorial>
 
-`Github repository <https://github.com/bioexcel/biobb_wf_ligand_parameterization_api>`_.
+`Github repository <https://github.com/bioexcel/biobb_REST_API_documentation>`_.
 ========================================================================================
 

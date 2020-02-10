@@ -1,4 +1,5 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bioexcel/biobb_REST_API_documentation/master?filepath=biobb_REST_API_documentation%2Fnotebooks%2Fbiobb_REST_API_documentation.ipynb)
+[![](https://readthedocs.org/projects/biobb-rest-api-documentation/badge/?version=latest)](https://biobb-rest-api-documentation.readthedocs.io/en/latest/?badge=latest)
+[![](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bioexcel/biobb_REST_API_documentation/master?filepath=biobb_REST_API_documentation%2Fnotebooks%2Fbiobb_REST_API_documentation.ipynb)
 
 # BioBB REST API documentation tutorial
 
@@ -31,7 +32,7 @@ jupyter-notebook biobb_REST_API_documentation/notebooks/biobb_REST_API_documenta
 
 ## Tutorial
 
-Click here to [view tutorial in Read the Docs]()
+Click here to [view tutorial in Read the Docs](https://biobb-rest-api-documentation.readthedocs.io/en/latest/tutorial.html)
 
 Click here to [execute tutorial in Binder](https://mybinder.org/v2/gh/bioexcel/biobb_REST_API_documentation/master?filepath=biobb_REST_API_documentation%2Fnotebooks%2Fbiobb_REST_API_documentation.ipynb)
 
