@@ -8,4 +8,5 @@ dependencies:
   - requests
   - nb_conda_kernels
   - nglview==1.1.7
+  - plotly
   - conda
