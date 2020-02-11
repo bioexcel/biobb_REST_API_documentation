@@ -6,5 +6,4 @@ dependencies:
   - python==3.6
   - plotly
   - nglview
-  - simpletraj
   - conda
