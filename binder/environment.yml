@@ -2,10 +2,9 @@ name: biobb_REST_API_documentation
 channels:
   - conda-forge
   - bioconda
-  - anaconda
 dependencies:
   - python==3.6
   - plotly
-  - nglview
+  - nglview==1.1.7
+  - simpletraj
   - conda
-  - requests
