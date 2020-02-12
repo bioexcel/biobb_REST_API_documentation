@@ -760,7 +760,7 @@ Visualize downloaded PDB in NGLView:
 import nglview
 
 # Show protein
-view = nglview.show_file(downloaded_pdb)
+view = nglview.show_structure_file(downloaded_pdb)
 view.add_representation(repr_type='ball+stick', selection='het')
 view._remote_call('setSize', target='Widget', args=['','600px'])
 view
@@ -836,7 +836,7 @@ Visualize generated extracted heteroatom in NGLView:
 
 ```python
 # Show protein
-view = nglview.show_file(heteroatom)
+view = nglview.show_structure_file(heteroatom)
 view.add_representation(repr_type='ball+stick', selection='het')
 view._remote_call('setSize', target='Widget', args=['','600px'])
 view
