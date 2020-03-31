@@ -6,6 +6,7 @@ guidelines.md
 *.xvg
 !biobb_REST_API_documentation/notebooks/files/*
 log*.*
+!logo.png
 .ipynb_checkpoints/
 biobb_REST_API_documentation/notebooks/*.png
 biobb_REST_API_documentation/notebooks/*.gif
