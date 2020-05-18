@@ -82,34 +82,34 @@ The **BioBB REST API** works as an asynchronous launcher of jobs, as these jobs 
 
 In order to get a complete **list of available packages**, we must do a **GET** request to the following endpoint:
 
-`http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch`
+`https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch`
 
-This endpoint returns a **JSON HTTP response** with status `200`. More information in the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest/#/List%20of%20Services/getPckgList).
+This endpoint returns a **JSON HTTP response** with status `200`. More information in the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest/#/List%20of%20Services/getPckgList).
 
 <a id="list_tools"></a>
 #### List of tools
 
 If there is need for a **list of tools for a single package**, we must do a **GET** request to the following endpoint:
 
-`http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}`
+`https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}`
 
-This endpoint returns a **JSON HTTP response** with status `200` or a `404` status if the package id is incorrect. More information in the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest/#/List%20of%20Services/getToolsList).
+This endpoint returns a **JSON HTTP response** with status `200` or a `404` status if the package id is incorrect. More information in the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest/#/List%20of%20Services/getToolsList).
 
 <a id="tools_prop"></a>
 #### Tool's properties
 
 If there is only need for the **information of a single tool**, we must do a **GET** request to the following endpoint:
 
-`http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
+`https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
 
-This endpoint returns a **JSON HTTP response** with status `200` or a `404` status if the package id and / or the tool id are incorrect. The reason for failure should be detailed in the JSON response. More information in the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest/#/Launch%20Tool/getLaunchTool).
+This endpoint returns a **JSON HTTP response** with status `200` or a `404` status if the package id and / or the tool id are incorrect. The reason for failure should be detailed in the JSON response. More information in the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest/#/Launch%20Tool/getLaunchTool).
 
 <a id="launch_tool"></a>
 ### Launch tool
 
 For **launching a tool**, we must do a **POST** request to the following endpoint:
 
-`http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
+`https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
 
 In the body of this POST request, **we must add the file(s) needed as input** (included the properties config file in **JSON** or **YAML** format) and the name for the output(s). The detailed list of inputs and outputs with its respectives properties can be found in the **GET** request of this same endpoint.
 
@@ -119,14 +119,14 @@ This endpoint returns a **JSON HTTP response** with the following possible statu
 * `404`: **There was some error launching the tool.** The reason for failure should be detailed in the JSON response.
 * `500`: The job has been launched, but **some internal server error** has occurred during the execution.
 
-More information for a generic call in the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest/#/Launch%20Tool/postLaunchTool). The documentation for all the tools is available in the [BioBB REST API Tools Documentation section](http://mmb.irbbarcelona.org/biobb-api/tools-documentation?docExpansion=none). Interactive examples for all the tools are available in the [BioBB REST API Tools Execution section](http://mmb.irbbarcelona.org/biobb-api/tools-execution).
+More information for a generic call in the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest/#/Launch%20Tool/postLaunchTool). The documentation for all the tools is available in the [BioBB REST API Tools Documentation section](https://mmb.irbbarcelona.org/biobb-api/tools-documentation?docExpansion=none). Interactive examples for all the tools are available in the [BioBB REST API Tools Execution section](https://mmb.irbbarcelona.org/biobb-api/tools-execution).
 
 <a id="retrieve_status"></a>
 ### Retrieve status
 
 If the previous endpoint returned a `303` status, we must do a **GET** request to the following endpoint providing the given token in the path:
 
-`http://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/status/{token}`
+`https://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/status/{token}`
 
 This endpoint checks the state of the job and returns a **JSON HTTP response** with the following possible status:
 
@@ -135,16 +135,16 @@ This endpoint checks the state of the job and returns a **JSON HTTP response** w
 * `404`: **Token incorrect, job unexisting or expired.**
 * `500`: Some **internal server error** has occurred during the execution.
 
-More information in the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest/#/Retrieve/getRetrieveStatus).
+More information in the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest/#/Retrieve/getRetrieveStatus).
 
 <a id="retrieve_data"></a>
 ### Retrieve data
 
 Once the previous endpoint returns a `200` status, the output file(s) are ready for its retrieval, so we must do a **GET** request to the following endpoint providing the given **file id** in the path:
 
-`http://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/data/{id}`
+`https://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/data/{id}`
 
-This endpoint returns the **requested file** with a `200` status or a `404` status if the provided id is incorrect, the file doesn't exist or it has expired. More information in the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest/#/Retrieve/getRetrieveData).
+This endpoint returns the **requested file** with a `200` status or a `404` status if the provided id is incorrect, the file doesn't exist or it has expired. More information in the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest/#/Retrieve/getRetrieveData).
 
 Note that if we have executed a job that returns multiple output files, a call to this endpoint must be done **for each of the output files** generated by the job.
 
@@ -158,36 +158,36 @@ The **BioBB REST API** provides sample files for most of the inputs and outputs 
 
 In order to download **all the sample files**, we must do a **GET** request to the following endpoint:
 
-`http://mmb.irbbarcelona.org/biobb-api/rest/v1/sample`
+`https://mmb.irbbarcelona.org/biobb-api/rest/v1/sample`
 
-This endpoint returns the **requested file** with a `200` status. More information in the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getSample).
+This endpoint returns the **requested file** with a `200` status. More information in the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getSample).
 
 <a id="pckg_sample"></a>
 #### Package sample files
 
 In order to download **all the sample files of a package**, we must do a **GET** request to the following endpoint:
 
-`http://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}`
+`https://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}`
 
-This endpoint returns the **requested file** with a `200` status or a `404` status if the package id is incorrect. More information in the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getPackageSample).
+This endpoint returns the **requested file** with a `200` status or a `404` status if the package id is incorrect. More information in the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getPackageSample).
 
 <a id="tool_sample"></a>
 #### Tool sample files
 
 In order to download **all the sample files of a tool**, we must do a **GET** request to the following endpoint:
 
-`http://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}/{tool}`
+`https://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}/{tool}`
 
-This endpoint returns the **requested file** with a `200` status or a `404` status if the package id and / or the tool id are incorrect. The reason for failure should be detailed in the JSON response. More information in the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getToolSample).
+This endpoint returns the **requested file** with a `200` status or a `404` status if the package id and / or the tool id are incorrect. The reason for failure should be detailed in the JSON response. More information in the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getToolSample).
 
 <a id="sample"></a>
 #### Single sample file
 
 In order to download **a single sample file**, we must do a **GET** request to the following endpoint:
 
-`http://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}/{tool}/{id}`
+`https://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}/{tool}/{id}`
 
-This endpoint returns the **requested file** with a `200` status or a `404` status if the package id and / or the tool id and / or the file id are incorrect. The reason for failure should be detailed in the JSON response. More information in the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getSingleSample).
+This endpoint returns the **requested file** with a `200` status or a `404` status if the package id and / or the tool id and / or the file id are incorrect. The reason for failure should be detailed in the JSON response. More information in the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getSingleSample).
 
 <a id="examples"></a>
 ## Examples
@@ -201,7 +201,7 @@ First off, we will import the Python requests and json library and set the root 
 import requests
 import json
 
-apiURL  = "http://mmb.irbbarcelona.org/biobb-api/rest/v1/"
+apiURL  = "https://mmb.irbbarcelona.org/biobb-api/rest/v1/"
 ```
 
 <a id="tools_info_ex"></a>
@@ -231,11 +231,11 @@ def post_data(url, d, f):
 <a id="list_pckg_ex"></a>
 #### List of packages
 
-For more information about this endpoint, please visit the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest#/List%20of%20Services/getPckgList).
+For more information about this endpoint, please visit the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest#/List%20of%20Services/getPckgList).
 
 ##### Endpoint
 
-**GET** `http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch`
+**GET** `https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch`
 
 ##### Code
 
@@ -255,11 +255,11 @@ print(json.dumps(response.json, indent=2))
 <a id="list_tools_ex"></a>
 #### List of tools from a specific package
 
-For more information about this endpoint, please visit the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest#/List%20of%20Services/getToolsList).
+For more information about this endpoint, please visit the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest#/List%20of%20Services/getToolsList).
 
 ##### Endpoint
 
-**GET** `http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}`
+**GET** `https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}`
 
 ##### Code
 
@@ -281,11 +281,11 @@ print(json.dumps(response.json, indent=2))
 <a id="tools_prop_ex"></a>
 #### Tool's properties
 
-For more information about this endpoint, please visit the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest#/Launch%20Tool/getLaunchTool).
+For more information about this endpoint, please visit the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest#/Launch%20Tool/getLaunchTool).
 
 ##### Endpoint
 
-**GET** `http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
+**GET** `https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
 
 ##### Code
 
@@ -384,7 +384,7 @@ print(json.dumps(response.json, indent=2))
 <a id="launch_tool_ex"></a>
 ### Launch tool
 
-For more information about this endpoint, please visit the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest#/Launch%20Tool/postLaunchTool). The documentation for all the tools is available in the [BioBB REST API Tools Documentation section](http://mmb.irbbarcelona.org/biobb-api/tools-documentation?docExpansion=none). Interactive examples for all the tools are available in the [BioBB REST API Tools Execution section](http://mmb.irbbarcelona.org/biobb-api/tools-execution).
+For more information about this endpoint, please visit the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest#/Launch%20Tool/postLaunchTool). The documentation for all the tools is available in the [BioBB REST API Tools Documentation section](https://mmb.irbbarcelona.org/biobb-api/tools-documentation?docExpansion=none). Interactive examples for all the tools are available in the [BioBB REST API Tools Execution section](https://mmb.irbbarcelona.org/biobb-api/tools-execution).
 
 Definition of functions needed for launch a job:
 
@@ -446,7 +446,7 @@ properties:
 
 ##### Endpoint
 
-**POST** `http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
+**POST** `https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
 
 ##### Code
 
@@ -494,7 +494,7 @@ File config:
 
 ##### Endpoint
 
-**POST** `http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
+**POST** `https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
 
 ##### Code
 
@@ -526,7 +526,7 @@ token = launch_job(url = apiURL + 'launch/biobb_analysis/cpptraj_average',
 
 ##### Endpoint
 
-**POST** `http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
+**POST** `https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}`
 
 ##### Code
 
@@ -568,7 +568,7 @@ token = launch_job(url = apiURL + 'launch/biobb_analysis/cpptraj_average',
 <a id="retrieve_status_ex"></a>
 ### Retrieve status
 
-For more information about this endpoint, please visit the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest#/Retrieve/getRetrieveStatus).
+For more information about this endpoint, please visit the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest#/Retrieve/getRetrieveStatus).
 
 Definition of functions needed for retrieve the status of a job:
 
@@ -591,8 +591,8 @@ def check_status(url, ok, error):
             return counter
             break
 
-# Function that checks the status and parses the reponse JSON for saving th output files in a list
-def check_job(token):
+# Function that checks the status and parses the reponse JSON for saving the output files in a list
+def check_job(token, apiURL):
     # define retrieve status URL
     url = apiURL + 'retrieve/status/' + token
     # check status until job has finished
@@ -618,7 +618,7 @@ def check_job(token):
 
 ##### Endpoint
 
-**GET** `http://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/status/{token}`
+**GET** `https://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/status/{token}`
 
 ##### Code
 
@@ -627,7 +627,7 @@ The function below checks the status of a job and awaits until the response stat
 
 ```python
 # Check job status
-out_files = check_job(token)
+out_files = check_job(token, apiURL)
 ```
 
     Total elapsed time: 0:00:20
@@ -651,7 +651,7 @@ out_files = check_job(token)
 <a id="retrieve_data_ex"></a>
 ### Retrieve data
 
-For more information about this endpoint, please visit the [BioBB REST API Documentation section](http://mmb.irbbarcelona.org/biobb-api/rest#/Retrieve/getRetrieveData).
+For more information about this endpoint, please visit the [BioBB REST API Documentation section](https://mmb.irbbarcelona.org/biobb-api/rest#/Retrieve/getRetrieveData).
 
 Definition of functions needed for retrieve the output file(s) generated by a job:
 
@@ -665,7 +665,7 @@ def get_file(url, filename):
     file.close()
 
 # Retrieves all the files provided in the out_files list
-def retrieve_data(out_files):
+def retrieve_data(out_files, apiURL):
     if not out_files:
         return "No files provided"
     for outf in out_files:
@@ -674,7 +674,7 @@ def retrieve_data(out_files):
 
 ##### Endpoint
 
-**GET** `http://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/data/{id}`
+**GET** `https://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/data/{id}`
 
 ##### Code
 
@@ -684,7 +684,7 @@ The function below makes a single call to the *retrieve/data* endpoint for each 
 ```python
 # Save generated file(s) to disk
 
-retrieve_data(out_files)
+retrieve_data(out_files, apiURL)
 ```
 
 <a id="practical_cases"></a>
@@ -726,7 +726,7 @@ token = launch_job(url = apiURL + 'launch/biobb_io/pdb',
 
 ```python
 # Check job status
-out_files = check_job(token)
+out_files = check_job(token, apiURL)
 ```
 
     Total elapsed time: 0:00:06
@@ -750,7 +750,7 @@ out_files = check_job(token)
 
 ```python
 # Save generated file to disk
-retrieve_data(out_files)
+retrieve_data(out_files, apiURL)
 ```
 
 Visualize downloaded PDB in NGLView:
@@ -804,7 +804,7 @@ token = launch_job(url = apiURL + 'launch/biobb_structure_utils/extract_heteroat
 
 ```python
 # Check job status
-out_files = check_job(token)
+out_files = check_job(token, apiURL)
 ```
 
     Total elapsed time: 0:00:20
@@ -828,7 +828,7 @@ out_files = check_job(token)
 
 ```python
 # Save generated file to disk
-retrieve_data(out_files)
+retrieve_data(out_files, apiURL)
 ```
 
 Visualize generated extracted heteroatom in NGLView:
@@ -876,7 +876,7 @@ token = launch_job(url = apiURL + 'launch/biobb_analysis/gmx_energy',
 
 ```python
 # Check job status
-out_files = check_job(token)
+out_files = check_job(token, apiURL)
 ```
 
     Total elapsed time: 0:00:08
@@ -900,7 +900,7 @@ out_files = check_job(token)
 
 ```python
 # Save generated file to disk
-retrieve_data(out_files)
+retrieve_data(out_files, apiURL)
 ```
 
 Visualize generated energy file in plotly:

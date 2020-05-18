@@ -13188,19 +13188,19 @@ div#notebook {
 <p><a id="tools_info"></a></p>
 <h3 id="Tools-information">Tools information<a class="anchor-link" href="#Tools-information">&#182;</a></h3><p><a id="list_pckg"></a></p>
 <h4 id="List-of-packages">List of packages<a class="anchor-link" href="#List-of-packages">&#182;</a></h4><p>In order to get a complete <strong>list of available packages</strong>, we must do a <strong>GET</strong> request to the following endpoint:</p>
-<p><code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch</code></p>
-<p>This endpoint returns a <strong>JSON HTTP response</strong> with status <code>200</code>. More information in the <a href="http://mmb.irbbarcelona.org/biobb-api/rest/#/List%20of%20Services/getPckgList">BioBB REST API Documentation section</a>.</p>
+<p><code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch</code></p>
+<p>This endpoint returns a <strong>JSON HTTP response</strong> with status <code>200</code>. More information in the <a href="https://mmb.irbbarcelona.org/biobb-api/rest/#/List%20of%20Services/getPckgList">BioBB REST API Documentation section</a>.</p>
 <p><a id="list_tools"></a></p>
 <h4 id="List-of-tools">List of tools<a class="anchor-link" href="#List-of-tools">&#182;</a></h4><p>If there is need for a <strong>list of tools for a single package</strong>, we must do a <strong>GET</strong> request to the following endpoint:</p>
-<p><code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}</code></p>
-<p>This endpoint returns a <strong>JSON HTTP response</strong> with status <code>200</code> or a <code>404</code> status if the package id is incorrect. More information in the <a href="http://mmb.irbbarcelona.org/biobb-api/rest/#/List%20of%20Services/getToolsList">BioBB REST API Documentation section</a>.</p>
+<p><code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}</code></p>
+<p>This endpoint returns a <strong>JSON HTTP response</strong> with status <code>200</code> or a <code>404</code> status if the package id is incorrect. More information in the <a href="https://mmb.irbbarcelona.org/biobb-api/rest/#/List%20of%20Services/getToolsList">BioBB REST API Documentation section</a>.</p>
 <p><a id="tools_prop"></a></p>
 <h4 id="Tool's-properties">Tool's properties<a class="anchor-link" href="#Tool's-properties">&#182;</a></h4><p>If there is only need for the <strong>information of a single tool</strong>, we must do a <strong>GET</strong> request to the following endpoint:</p>
-<p><code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
-<p>This endpoint returns a <strong>JSON HTTP response</strong> with status <code>200</code> or a <code>404</code> status if the package id and / or the tool id are incorrect. The reason for failure should be detailed in the JSON response. More information in the <a href="http://mmb.irbbarcelona.org/biobb-api/rest/#/Launch%20Tool/getLaunchTool">BioBB REST API Documentation section</a>.</p>
+<p><code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
+<p>This endpoint returns a <strong>JSON HTTP response</strong> with status <code>200</code> or a <code>404</code> status if the package id and / or the tool id are incorrect. The reason for failure should be detailed in the JSON response. More information in the <a href="https://mmb.irbbarcelona.org/biobb-api/rest/#/Launch%20Tool/getLaunchTool">BioBB REST API Documentation section</a>.</p>
 <p><a id="launch_tool"></a></p>
 <h3 id="Launch-tool">Launch tool<a class="anchor-link" href="#Launch-tool">&#182;</a></h3><p>For <strong>launching a tool</strong>, we must do a <strong>POST</strong> request to the following endpoint:</p>
-<p><code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
+<p><code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
 <p>In the body of this POST request, <strong>we must add the file(s) needed as input</strong> (included the properties config file in <strong>JSON</strong> or <strong>YAML</strong> format) and the name for the output(s). The detailed list of inputs and outputs with its respectives properties can be found in the <strong>GET</strong> request of this same endpoint.</p>
 <p>This endpoint returns a <strong>JSON HTTP response</strong> with the following possible status:</p>
 <ul>
@@ -13208,10 +13208,10 @@ div#notebook {
 <li><code>404</code>: <strong>There was some error launching the tool.</strong> The reason for failure should be detailed in the JSON response.</li>
 <li><code>500</code>: The job has been launched, but <strong>some internal server error</strong> has occurred during the execution.</li>
 </ul>
-<p>More information for a generic call in the <a href="http://mmb.irbbarcelona.org/biobb-api/rest/#/Launch%20Tool/postLaunchTool">BioBB REST API Documentation section</a>. The documentation for all the tools is available in the <a href="http://mmb.irbbarcelona.org/biobb-api/tools-documentation?docExpansion=none">BioBB REST API Tools Documentation section</a>. Interactive examples for all the tools are available in the <a href="http://mmb.irbbarcelona.org/biobb-api/tools-execution">BioBB REST API Tools Execution section</a>.</p>
+<p>More information for a generic call in the <a href="https://mmb.irbbarcelona.org/biobb-api/rest/#/Launch%20Tool/postLaunchTool">BioBB REST API Documentation section</a>. The documentation for all the tools is available in the <a href="https://mmb.irbbarcelona.org/biobb-api/tools-documentation?docExpansion=none">BioBB REST API Tools Documentation section</a>. Interactive examples for all the tools are available in the <a href="https://mmb.irbbarcelona.org/biobb-api/tools-execution">BioBB REST API Tools Execution section</a>.</p>
 <p><a id="retrieve_status"></a></p>
 <h3 id="Retrieve-status">Retrieve status<a class="anchor-link" href="#Retrieve-status">&#182;</a></h3><p>If the previous endpoint returned a <code>303</code> status, we must do a <strong>GET</strong> request to the following endpoint providing the given token in the path:</p>
-<p><code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/status/{token}</code></p>
+<p><code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/status/{token}</code></p>
 <p>This endpoint checks the state of the job and returns a <strong>JSON HTTP response</strong> with the following possible status:</p>
 <ul>
 <li><code>200</code>: <strong>The job has finished successfully</strong> and in the JSON response we can found a list of output files generated by the job with its correspondent id for retrieving them on the next endpoint (defined in the same JSON message).</li>
@@ -13219,30 +13219,30 @@ div#notebook {
 <li><code>404</code>: <strong>Token incorrect, job unexisting or expired.</strong></li>
 <li><code>500</code>: Some <strong>internal server error</strong> has occurred during the execution.</li>
 </ul>
-<p>More information in the <a href="http://mmb.irbbarcelona.org/biobb-api/rest/#/Retrieve/getRetrieveStatus">BioBB REST API Documentation section</a>.</p>
+<p>More information in the <a href="https://mmb.irbbarcelona.org/biobb-api/rest/#/Retrieve/getRetrieveStatus">BioBB REST API Documentation section</a>.</p>
 <p><a id="retrieve_data"></a></p>
 <h3 id="Retrieve-data">Retrieve data<a class="anchor-link" href="#Retrieve-data">&#182;</a></h3><p>Once the previous endpoint returns a <code>200</code> status, the output file(s) are ready for its retrieval, so we must do a <strong>GET</strong> request to the following endpoint providing the given <strong>file id</strong> in the path:</p>
-<p><code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/data/{id}</code></p>
-<p>This endpoint returns the <strong>requested file</strong> with a <code>200</code> status or a <code>404</code> status if the provided id is incorrect, the file doesn't exist or it has expired. More information in the <a href="http://mmb.irbbarcelona.org/biobb-api/rest/#/Retrieve/getRetrieveData">BioBB REST API Documentation section</a>.</p>
+<p><code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/data/{id}</code></p>
+<p>This endpoint returns the <strong>requested file</strong> with a <code>200</code> status or a <code>404</code> status if the provided id is incorrect, the file doesn't exist or it has expired. More information in the <a href="https://mmb.irbbarcelona.org/biobb-api/rest/#/Retrieve/getRetrieveData">BioBB REST API Documentation section</a>.</p>
 <p>Note that if we have executed a job that returns multiple output files, a call to this endpoint must be done <strong>for each of the output files</strong> generated by the job.</p>
 <p><a id="sample_files"></a></p>
 <h3 id="Sample-files">Sample files<a class="anchor-link" href="#Sample-files">&#182;</a></h3><p>The <strong>BioBB REST API</strong> provides sample files for most of the inputs and outputs of each tool. Files can be accessed thought the whole <strong>BioBB REST API</strong> hierarchical range.</p>
 <p><a id="all_sample"></a></p>
 <h4 id="All-sample-files">All sample files<a class="anchor-link" href="#All-sample-files">&#182;</a></h4><p>In order to download <strong>all the sample files</strong>, we must do a <strong>GET</strong> request to the following endpoint:</p>
-<p><code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/sample</code></p>
-<p>This endpoint returns the <strong>requested file</strong> with a <code>200</code> status. More information in the <a href="http://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getSample">BioBB REST API Documentation section</a>.</p>
+<p><code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/sample</code></p>
+<p>This endpoint returns the <strong>requested file</strong> with a <code>200</code> status. More information in the <a href="https://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getSample">BioBB REST API Documentation section</a>.</p>
 <p><a id="pckg_sample"></a></p>
 <h4 id="Package-sample-files">Package sample files<a class="anchor-link" href="#Package-sample-files">&#182;</a></h4><p>In order to download <strong>all the sample files of a package</strong>, we must do a <strong>GET</strong> request to the following endpoint:</p>
-<p><code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}</code></p>
-<p>This endpoint returns the <strong>requested file</strong> with a <code>200</code> status or a <code>404</code> status if the package id is incorrect. More information in the <a href="http://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getPackageSample">BioBB REST API Documentation section</a>.</p>
+<p><code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}</code></p>
+<p>This endpoint returns the <strong>requested file</strong> with a <code>200</code> status or a <code>404</code> status if the package id is incorrect. More information in the <a href="https://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getPackageSample">BioBB REST API Documentation section</a>.</p>
 <p><a id="tool_sample"></a></p>
 <h4 id="Tool-sample-files">Tool sample files<a class="anchor-link" href="#Tool-sample-files">&#182;</a></h4><p>In order to download <strong>all the sample files of a tool</strong>, we must do a <strong>GET</strong> request to the following endpoint:</p>
-<p><code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}/{tool}</code></p>
-<p>This endpoint returns the <strong>requested file</strong> with a <code>200</code> status or a <code>404</code> status if the package id and / or the tool id are incorrect. The reason for failure should be detailed in the JSON response. More information in the <a href="http://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getToolSample">BioBB REST API Documentation section</a>.</p>
+<p><code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}/{tool}</code></p>
+<p>This endpoint returns the <strong>requested file</strong> with a <code>200</code> status or a <code>404</code> status if the package id and / or the tool id are incorrect. The reason for failure should be detailed in the JSON response. More information in the <a href="https://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getToolSample">BioBB REST API Documentation section</a>.</p>
 <p><a id="sample"></a></p>
 <h4 id="Single-sample-file">Single sample file<a class="anchor-link" href="#Single-sample-file">&#182;</a></h4><p>In order to download <strong>a single sample file</strong>, we must do a <strong>GET</strong> request to the following endpoint:</p>
-<p><code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}/{tool}/{id}</code></p>
-<p>This endpoint returns the <strong>requested file</strong> with a <code>200</code> status or a <code>404</code> status if the package id and / or the tool id and / or the file id are incorrect. The reason for failure should be detailed in the JSON response. More information in the <a href="http://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getSingleSample">BioBB REST API Documentation section</a>.</p>
+<p><code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/sample/{package}/{tool}/{id}</code></p>
+<p>This endpoint returns the <strong>requested file</strong> with a <code>200</code> status or a <code>404</code> status if the package id and / or the tool id and / or the file id are incorrect. The reason for failure should be detailed in the JSON response. More information in the <a href="https://mmb.irbbarcelona.org/biobb-api/rest#/Sample%20Files/getSingleSample">BioBB REST API Documentation section</a>.</p>
 
 </div>
 </div>
@@ -13265,7 +13265,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
-<span class="n">apiURL</span>  <span class="o">=</span> <span class="s2">&quot;http://mmb.irbbarcelona.org/biobb-api/rest/v1/&quot;</span>
+<span class="n">apiURL</span>  <span class="o">=</span> <span class="s2">&quot;https://mmb.irbbarcelona.org/biobb-api/rest/v1/&quot;</span>
 </pre></div>
 
     </div>
@@ -13320,7 +13320,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="list_pckg_ex"></a></p>
-<h4 id="List-of-packages">List of packages<a class="anchor-link" href="#List-of-packages">&#182;</a></h4><p>For more information about this endpoint, please visit the <a href="http://mmb.irbbarcelona.org/biobb-api/rest#/List%20of%20Services/getPckgList">BioBB REST API Documentation section</a>.</p>
+<h4 id="List-of-packages">List of packages<a class="anchor-link" href="#List-of-packages">&#182;</a></h4><p>For more information about this endpoint, please visit the <a href="https://mmb.irbbarcelona.org/biobb-api/rest#/List%20of%20Services/getPckgList">BioBB REST API Documentation section</a>.</p>
 <h5 id="Endpoint">Endpoint<a class="anchor-link" href="#Endpoint">&#182;</a></h5>
 </div>
 </div>
@@ -13328,7 +13328,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>GET</strong> <code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch</code></p>
+<p><strong>GET</strong> <code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch</code></p>
 
 </div>
 </div>
@@ -13380,7 +13380,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="list_tools_ex"></a></p>
-<h4 id="List-of-tools-from-a-specific-package">List of tools from a specific package<a class="anchor-link" href="#List-of-tools-from-a-specific-package">&#182;</a></h4><p>For more information about this endpoint, please visit the <a href="http://mmb.irbbarcelona.org/biobb-api/rest#/List%20of%20Services/getToolsList">BioBB REST API Documentation section</a>.</p>
+<h4 id="List-of-tools-from-a-specific-package">List of tools from a specific package<a class="anchor-link" href="#List-of-tools-from-a-specific-package">&#182;</a></h4><p>For more information about this endpoint, please visit the <a href="https://mmb.irbbarcelona.org/biobb-api/rest#/List%20of%20Services/getToolsList">BioBB REST API Documentation section</a>.</p>
 <h5 id="Endpoint">Endpoint<a class="anchor-link" href="#Endpoint">&#182;</a></h5>
 </div>
 </div>
@@ -13388,7 +13388,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>GET</strong> <code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}</code></p>
+<p><strong>GET</strong> <code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}</code></p>
 
 </div>
 </div>
@@ -13442,7 +13442,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="tools_prop_ex"></a></p>
-<h4 id="Tool's-properties">Tool's properties<a class="anchor-link" href="#Tool's-properties">&#182;</a></h4><p>For more information about this endpoint, please visit the <a href="http://mmb.irbbarcelona.org/biobb-api/rest#/Launch%20Tool/getLaunchTool">BioBB REST API Documentation section</a>.</p>
+<h4 id="Tool's-properties">Tool's properties<a class="anchor-link" href="#Tool's-properties">&#182;</a></h4><p>For more information about this endpoint, please visit the <a href="https://mmb.irbbarcelona.org/biobb-api/rest#/Launch%20Tool/getLaunchTool">BioBB REST API Documentation section</a>.</p>
 <h5 id="Endpoint">Endpoint<a class="anchor-link" href="#Endpoint">&#182;</a></h5>
 </div>
 </div>
@@ -13450,7 +13450,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>GET</strong> <code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
+<p><strong>GET</strong> <code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
 
 </div>
 </div>
@@ -13581,7 +13581,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="launch_tool_ex"></a></p>
-<h3 id="Launch-tool">Launch tool<a class="anchor-link" href="#Launch-tool">&#182;</a></h3><p>For more information about this endpoint, please visit the <a href="http://mmb.irbbarcelona.org/biobb-api/rest#/Launch%20Tool/postLaunchTool">BioBB REST API Documentation section</a>. The documentation for all the tools is available in the <a href="http://mmb.irbbarcelona.org/biobb-api/tools-documentation?docExpansion=none">BioBB REST API Tools Documentation section</a>. Interactive examples for all the tools are available in the <a href="http://mmb.irbbarcelona.org/biobb-api/tools-execution">BioBB REST API Tools Execution section</a>.</p>
+<h3 id="Launch-tool">Launch tool<a class="anchor-link" href="#Launch-tool">&#182;</a></h3><p>For more information about this endpoint, please visit the <a href="https://mmb.irbbarcelona.org/biobb-api/rest#/Launch%20Tool/postLaunchTool">BioBB REST API Documentation section</a>. The documentation for all the tools is available in the <a href="https://mmb.irbbarcelona.org/biobb-api/tools-documentation?docExpansion=none">BioBB REST API Tools Documentation section</a>. Interactive examples for all the tools are available in the <a href="https://mmb.irbbarcelona.org/biobb-api/tools-execution">BioBB REST API Tools Execution section</a>.</p>
 <p>Definition of functions needed for launch a job:</p>
 
 </div>
@@ -13668,7 +13668,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>POST</strong> <code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
+<p><strong>POST</strong> <code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
 
 </div>
 </div>
@@ -13769,7 +13769,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>POST</strong> <code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
+<p><strong>POST</strong> <code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
 
 </div>
 </div>
@@ -13850,7 +13850,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>POST</strong> <code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
+<p><strong>POST</strong> <code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/launch/{package}/{tool}</code></p>
 
 </div>
 </div>
@@ -13929,7 +13929,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="retrieve_status_ex"></a></p>
-<h3 id="Retrieve-status">Retrieve status<a class="anchor-link" href="#Retrieve-status">&#182;</a></h3><p>For more information about this endpoint, please visit the <a href="http://mmb.irbbarcelona.org/biobb-api/rest#/Retrieve/getRetrieveStatus">BioBB REST API Documentation section</a>.</p>
+<h3 id="Retrieve-status">Retrieve status<a class="anchor-link" href="#Retrieve-status">&#182;</a></h3><p>For more information about this endpoint, please visit the <a href="https://mmb.irbbarcelona.org/biobb-api/rest#/Retrieve/getRetrieveStatus">BioBB REST API Documentation section</a>.</p>
 <p>Definition of functions needed for retrieve the status of a job:</p>
 
 </div>
@@ -13957,8 +13957,8 @@ div#notebook {
             <span class="k">return</span> <span class="n">counter</span>
             <span class="k">break</span>
 
-<span class="c1"># Function that checks the status and parses the reponse JSON for saving th output files in a list</span>
-<span class="k">def</span> <span class="nf">check_job</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
+<span class="c1"># Function that checks the status and parses the reponse JSON for saving the output files in a list</span>
+<span class="k">def</span> <span class="nf">check_job</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">apiURL</span><span class="p">):</span>
     <span class="c1"># define retrieve status URL</span>
     <span class="n">url</span> <span class="o">=</span> <span class="n">apiURL</span> <span class="o">+</span> <span class="s1">&#39;retrieve/status/&#39;</span> <span class="o">+</span> <span class="n">token</span>
     <span class="c1"># check status until job has finished</span>
@@ -13997,7 +13997,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>GET</strong> <code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/status/{token}</code></p>
+<p><strong>GET</strong> <code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/status/{token}</code></p>
 
 </div>
 </div>
@@ -14023,7 +14023,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check job status</span>
-<span class="n">out_files</span> <span class="o">=</span> <span class="n">check_job</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+<span class="n">out_files</span> <span class="o">=</span> <span class="n">check_job</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">apiURL</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14068,7 +14068,7 @@ REST API JSON response:
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="retrieve_data_ex"></a></p>
-<h3 id="Retrieve-data">Retrieve data<a class="anchor-link" href="#Retrieve-data">&#182;</a></h3><p>For more information about this endpoint, please visit the <a href="http://mmb.irbbarcelona.org/biobb-api/rest#/Retrieve/getRetrieveData">BioBB REST API Documentation section</a>.</p>
+<h3 id="Retrieve-data">Retrieve data<a class="anchor-link" href="#Retrieve-data">&#182;</a></h3><p>For more information about this endpoint, please visit the <a href="https://mmb.irbbarcelona.org/biobb-api/rest#/Retrieve/getRetrieveData">BioBB REST API Documentation section</a>.</p>
 <p>Definition of functions needed for retrieve the output file(s) generated by a job:</p>
 
 </div>
@@ -14087,7 +14087,7 @@ REST API JSON response:
     <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="c1"># Retrieves all the files provided in the out_files list</span>
-<span class="k">def</span> <span class="nf">retrieve_data</span><span class="p">(</span><span class="n">out_files</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">retrieve_data</span><span class="p">(</span><span class="n">out_files</span><span class="p">,</span> <span class="n">apiURL</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">out_files</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">&quot;No files provided&quot;</span>
     <span class="k">for</span> <span class="n">outf</span> <span class="ow">in</span> <span class="n">out_files</span><span class="p">:</span>
@@ -14109,7 +14109,7 @@ REST API JSON response:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>GET</strong> <code>http://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/data/{id}</code></p>
+<p><strong>GET</strong> <code>https://mmb.irbbarcelona.org/biobb-api/rest/v1/retrieve/data/{id}</code></p>
 
 </div>
 </div>
@@ -14136,7 +14136,7 @@ REST API JSON response:
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save generated file(s) to disk</span>
 
-<span class="n">retrieve_data</span><span class="p">(</span><span class="n">out_files</span><span class="p">)</span>
+<span class="n">retrieve_data</span><span class="p">(</span><span class="n">out_files</span><span class="p">,</span> <span class="n">apiURL</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14230,7 +14230,7 @@ REST API JSON response:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check job status</span>
-<span class="n">out_files</span> <span class="o">=</span> <span class="n">check_job</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+<span class="n">out_files</span> <span class="o">=</span> <span class="n">check_job</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">apiURL</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14277,7 +14277,7 @@ REST API JSON response:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save generated file to disk</span>
-<span class="n">retrieve_data</span><span class="p">(</span><span class="n">out_files</span><span class="p">)</span>
+<span class="n">retrieve_data</span><span class="p">(</span><span class="n">out_files</span><span class="p">,</span> <span class="n">apiURL</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14392,7 +14392,7 @@ REST API JSON response:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check job status</span>
-<span class="n">out_files</span> <span class="o">=</span> <span class="n">check_job</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+<span class="n">out_files</span> <span class="o">=</span> <span class="n">check_job</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">apiURL</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14439,7 +14439,7 @@ REST API JSON response:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save generated file to disk</span>
-<span class="n">retrieve_data</span><span class="p">(</span><span class="n">out_files</span><span class="p">)</span>
+<span class="n">retrieve_data</span><span class="p">(</span><span class="n">out_files</span><span class="p">,</span> <span class="n">apiURL</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14543,7 +14543,7 @@ REST API JSON response:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check job status</span>
-<span class="n">out_files</span> <span class="o">=</span> <span class="n">check_job</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+<span class="n">out_files</span> <span class="o">=</span> <span class="n">check_job</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">apiURL</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14590,7 +14590,7 @@ REST API JSON response:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save generated file to disk</span>
-<span class="n">retrieve_data</span><span class="p">(</span><span class="n">out_files</span><span class="p">)</span>
+<span class="n">retrieve_data</span><span class="p">(</span><span class="n">out_files</span><span class="p">,</span> <span class="n">apiURL</span><span class="p">)</span>
 </pre></div>
 
     </div>
