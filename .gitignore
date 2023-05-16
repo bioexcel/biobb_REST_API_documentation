@@ -15,3 +15,4 @@ biobb_REST_API_documentation/notebooks/*.docs.ipynb
 *.old.ipynb
 *.bk.ipynb
 \#*\#
+.DS_Store
